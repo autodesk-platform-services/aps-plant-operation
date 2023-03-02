@@ -133,9 +133,9 @@ function selectionChanged(v, e) {
                 elements.forEach((ele) => {
                     if (ele.properties.length != 2) return;
 
-                    var tag = ele.properties[1].displayValue;
-                    var desc = ele.properties[0].displayValue;
-                    var tagSplit = ele.properties[1].displayValue.split('-').reverse();
+                    var tag = ele.properties[0].displayValue;
+                    var desc = ele.properties[1].displayValue;
+                    var tagSplit = ele.properties[0].displayValue.split('-').reverse();
 
                     switch (desc) {
                         case 'PRIMARY LINE SEGMENT':
@@ -154,9 +154,9 @@ function selectionChanged(v, e) {
             viewers[v].model.getBulkProperties(e.dbIdArray, ['Tag', 'LineNumberTag'], (elements) => {
                 var tags = [];
                 elements.forEach((ele) => {
-                    if (ele.properties.length != 1) return;
+                    //if (ele.properties.length != 1) return;
                     var tag = getPropertyByName(ele.properties, ['Tag', 'LineNumberTag']);
-                    tags.push({ props: ['Tag'], value: tag });
+                    tags.push({ props: ['Tag', 'LineNumberTag'], value: tag });
 
                 })
                 isSelecting = true;
