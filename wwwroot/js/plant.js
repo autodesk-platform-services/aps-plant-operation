@@ -7,11 +7,11 @@ function objectTreeLoaded(v, e) {
         case '3d':
             getAllLeafComponents(e.model, function (dbIds) {
                 dbIds3d = dbIds;
-                e.model.getBulkProperties(dbIds, ['PnPClassName', 'LineNumberTag', 'Tag'], (elements) => {
+                e.model.getBulkProperties(dbIds, ['Class Name', 'LineNumberTag', 'Tag'], (elements) => {
                     elements.forEach((ele) => {
                         if (ele.properties.length < 2) return;
                         dbIds3dPnP.push(ele.dbId);
-                        var pnpClass = getPropertyByName(ele.properties, 'PnPClassName');
+                        var pnpClass = getPropertyByName(ele.properties, 'Class Name');
                         var tag = getPropertyByName(ele.properties, ['LineNumberTag', 'Tag'])
                         if (classes[pnpClass] === undefined) classes[pnpClass] = [];
                         if (classes[pnpClass][tag] === undefined) classes[pnpClass][tag] = [];
