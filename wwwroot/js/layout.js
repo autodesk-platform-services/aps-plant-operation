@@ -71,7 +71,7 @@ var config = {
 
 $(document).ready(function () {
     $('#layout').w2layout(config.layout);
-    w2ui.layout.html('top', '<a href="http://developer.autodesk.com" target="_blank"><img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="30"></a>');
+    w2ui.layout.html('top', '<a href="http://developer.autodesk.com" target="_blank"><img alt="Autodesk APS" src="https://cdn.autodesk.io/logo/black/stacked.png" height="28"></a>');
     w2ui.layout.html('left', $().w2sidebar(config.sidebar));
     w2ui.layout.load('main', '/panels/viewer2d.html');
     w2ui.layout.load('right', '/panels/viewer3d.html');
