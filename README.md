@@ -39,7 +39,7 @@ For Visual Studio, go to project properties and specify the environment variable
 - `APS_CLIENT_SECRET`: your APS Client Secret
 - `APS_CALLBACK_URL`: not used on this sample
 
-Compile the solution, Visual Studio should download the NUGET packages ([Autodesk Forge](https://www.nuget.org/packages/Autodesk.Forge/), [RestSharp](https://www.nuget.org/packages/RestSharp) and [Newtonsoft.Json](https://www.nuget.org/packages/newtonsoft.json/))
+Compile the solution, Visual Studio should download the required NuGet packages.
 
 Start the project, the **index.html** is marked as start page. At the webpage, the **New Bucket** blue button allow create new buckets (as of now, minimum input validation is implemented). For any bucket, right-click to upload a file (objects). For demonstration, objects **are not** automatically translated, but right-click on a object and select **Translate**. 
 
